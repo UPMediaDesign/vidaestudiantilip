@@ -1,0 +1,85 @@
+@charset "utf-8";
+/*
+Theme Name: Vida Estudiantil - IPCHILE
+Theme URL: http://ipchile.cl
+Description: Tema para Vida Estudiantil - IPCHILE
+Version: 1.0
+Author: Carlos Peña(@CarlosChasca) & Arturo Jofre(@arturojofre)
+Author URL: http://upmedia.cl
+*/
+
+/* Webfonts */
+
+
+
+h2 {
+	color: #3874a5;
+}
+
+/*HEADER*/
+
+
+/*NAV*/
+header {
+		background-color: #3874a5;
+}
+nav {
+
+	color: #ffffff;
+	text-decoration: none;
+}
+
+
+
+.nav a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.navbar {
+	padding: 10px 0;
+}
+
+.navbar-right ul li { display: inline; }
+
+/*HOME*/
+
+.revistas {
+	
+}
+
+.revistas h2{
+	text-align: center;
+}
+.plan {
+	background-color: #3874a5;
+	color: #ffffff;
+}
+
+.fondos {
+
+}
+
+.actividades {
+	background-color: #f1f1f1;
+}
+
+/*PAGE*/
+
+
+/*SINGLE*/
+
+
+
+/*FOOTER*/
+
+footer {
+	padding: 50px 0;
+	background-color: #023551;
+	color: #ffffff;
+
+}
+
+footer .social {
+
+}
