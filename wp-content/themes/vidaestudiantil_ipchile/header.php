@@ -10,8 +10,15 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
+
+
+<!--Otros -->
+<?php call_scripts()?>
+<?php wp_head()?>
+
 <!-- Scripts -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 
@@ -34,7 +41,7 @@
 	            </div>
 
 	            <div class="navbar-collapse collapse">
-	              	<?php wp_nav_menu( array( 'container' => 'none', 'menu_class' => 'nav navbar-nav pull-left hidden-xs hidden-sm' , 'theme_location' => 'primary' ) ); ?>
+	              	<?php wp_nav_menu( array( 'container' => 'none', 'menu_class' => 'nav navbar-nav pull-left' , 'theme_location' => 'primary' ) ); ?>
 
 	              	<div class="searchh">
 		                  <form method="get" id="searchform" action="<?php bloginfo('url')?>">

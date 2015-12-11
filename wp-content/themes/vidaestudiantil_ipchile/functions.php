@@ -21,17 +21,22 @@ add_post_type_support('page', 'excerpt', 'excerpt', 'thumbnail');
 /* Add support for wp_nav_menu() */
 function register_my_menu() {
 	register_nav_menu( 'primary', 'Menú principal');
-	register_nav_menu( 'secondary', 'Menú footer');
-  register_nav_menu( 'third', 'Menú footer inferior');
+	register_nav_menu( 'second', 'Menú footer primer');
+  register_nav_menu( 'third', 'Menú footer segundo');
+  register_nav_menu( 'fourth', 'Menú footer tercero');
 }
 add_action( 'init', 'register_my_menu' );
 ?>
 <?php 
 function call_scripts() {
 	wp_deregister_script('jquery');
-  wp_enqueue_script('jquery' , 'http://code.jquery.com/jquery-1.10.0.min.js' , array() , '1.10' , true);
-  wp_enqueue_script('core' , get_template_directory_uri() . '/js/core.js' , array() , '1.0' , true);
-} 
+	wp_register_script('jquery', 'http://code.jquery.com/jquery-1.10.0.min.js');
+    wp_register_script('core', get_template_directory_uri() . '/js/core.js');
+
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('core');
+}    
+ 
 add_action('wp_enqueue_scripts', 'call_scripts');
 ?>
 <?php
@@ -53,7 +58,6 @@ function actividades_register() {
     register_post_type('actividades', $args);
     flush_rewrite_rules();
 }
-
 add_action('init', 'ferias_register');
 function ferias_register() {
     $args = array(
