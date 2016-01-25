@@ -6,6 +6,7 @@
 <title><?php wp_title();?></title>
 
 <!-- Styles -->
+<link href="<?php bloginfo('url');?>/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url')?>?ver=3.8.1" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">

@@ -4,6 +4,11 @@ add_image_size('slider', 1200, 440, true);
 add_image_size('plan', 407, 129, true);
 add_image_size('bigfondo', 1000, 245, true);
 add_image_size('squareactivity', 250, 250, true);
+add_image_size('headingpage', 1200, 335, true);
+add_image_size('planpage', 600, 277, true);
+add_image_size('actidestacado', 490, 205, true );
+add_image_size('ferias', 570, 228, true );
+add_image_size('singleenc', 1200, 510, true);
 }
 /* 
 add_filter('image_size_names_choose', 'my_image_sizes');
@@ -127,6 +132,24 @@ function fondos_register() {
         'supports' => array('title', 'editor' , 'excerpt' , 'thumbnail' )
     );
     register_post_type('fondos', $args);
+    flush_rewrite_rules();
+}
+
+add_action('init', 'slider_register');
+function slider_register() {
+    $args = array(
+        'label' => 'Slider Home',
+        'singular_label' => 'Slider',
+        'public' => true,
+        'menu_position' => 5, 
+        '_builtin' => false,
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => false,
+        'rewrite' => array( 'slug' => 'slider'),
+        'supports' => array('title', 'editor' , 'excerpt' , 'thumbnail' )
+    );
+    register_post_type('slider', $args);
     flush_rewrite_rules();
 }
 

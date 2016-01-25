@@ -2,7 +2,7 @@
 
 <section id="slider">
 	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-		<?php $sliders = get_posts(array('post_type' => 'publicaciones' , 'numberposts' => 12)) ?>
+		<?php $sliders = get_posts(array('post_type' => 'publicaciones' , 'numberposts' => 6)) ?>
         <div class="carousel-inner" role="listbox">
             <?php $slc = 0?>
             <?php foreach($sliders as $slider):?>
@@ -16,12 +16,12 @@
                     <p class="intro-ed"><?php echo $slider->post_excerpt?></p>
                     <p class="paragraph"><?php echo substr($slider->post_content , 0, 145)?>...</p>
             
-                    <a class="btn btn-danger" href="<?php echo get_field('link_publicacion', $slider->ID)?>">
+                    <a class="btn btn-danger" target="_blank" href="<?php echo get_field('link_publicacion', $slider->ID)?>">
                                         Ver Pubicación
                     </a>
-                    <a class="btn btn-warning download" href="<?php echo get_field('descarga', $slider->ID)?>">
+                    <!-- <a class="btn btn-warning download" href="<?php //echo get_field('descarga', $slider->ID)?>">
                                         Descargar Publicación
-                    </a>
+                    </a> -->
                 </div>
             
                 <div class="col-md-1 skk desktop"></div>
@@ -33,12 +33,49 @@
     </div>
 </section>
 
+<!-- Publicaciones Inicio -->
+
+<section class="publish">
+	<div class="container">
+		<div class="row">
+			
+			<?php $publishes = get_posts(array('post_type' => 'publicaciones', 'numberposts' => 1)); ?>
+            <?php $countpublishes = 0 ?>
+            <?php foreach ($publishes as $publish): ?>
+            <?php $countpublishes++ ?>
+            	
+                <article class="col-md-6 col-sm-6 col-xs-12"> 
+					<h2><?php echo $slider->post_title?></h2>
+					<div class="clear separator"></div>
+					<span class="col-xs-3">
+						<?php echo get_field('numero_de_publicacion', $slider->ID)?>
+					</span>
+
+					<div class="col-xs-9 row">
+						<h3><?php echo $publish->post_title ?></h3>
+                    	<span class="yellow-bg">
+                    		<p class="paragraph"><?php echo substr($publish->post_content , 0, 145)?>...</p>
+                    	</span>
+                    	<a class="btn btn-danger" target="_blank" href="<?php echo get_field('link_publicacion', $slider->ID)?>"> Ver Pubicación </a>
+					</div>
+                </article>  
+
+				<div class="col-md-6 publishframe">
+					<iframe width="501" height="439" src="<?php echo get_field('embed_publicacion', $publish->ID)?>" frameborder="0" allowfullscreen></iframe>
+				</div>
+            <?php endforeach?>
+
+		</div>
+	</div>
+</section>
+<!-- Publicaciones Fin -->
+
 <!-- Plan de Acompañamiento inicio -->
 <section class="plan">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 row">
-					<div class="col-md-8 col-sm-8 col-xs-12">
+			<div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+					<div class="col-md-8 col-sm-12 col-xs-12">
 						<h2>Plan de acompañamiento</h2>
 						<span>Instancia de acompañamiento que busca entregar diversos servicios psicoeducativos orientados a fortalecer las habilidades socioafectivas</span>
 					</div>
@@ -58,7 +95,7 @@
                     </figure>       
                     <?php endforeach?>
 
-                    <a class="btn btn-danger" href="<?php echo get_page_link(9)?>" title="Ver más" rel="blog">Ir a Planes</a>
+                    <a class="btn btn-danger" href="<?php home_url();?>/construccion" title="Ver más" rel="blog">Ir a Planes</a>
 			</div>
 		</div>
 	</div>
@@ -74,54 +111,39 @@
 				<h2>Fondos Concursables</h2>
 			</div>
 
-			<?php $fondos= get_posts(array('post_type' => 'fondos' , 'numberposts' => 1)); ?>
-                <?php $countfondos = 0 ?>
-                <?php foreach ($fondos as $fondo): ?>
-                <?php $countfondos++ ?>
-                <figure class=" col-md-12 col-sm-12 col-xs-12 bigfondo"> 
-                    <?php echo get_the_post_thumbnail( $fondo->ID , 'bigfondo', array('class' => 'img-responsive')) ?>
-                    <figcaption class="fondo side">
-                        <h3>
-                            <a href="<?php echo get_permalink($fondo->ID);?>" title="<?php echo $fondo->post_title ?>" rel="nofollow"><?php echo $fondo->post_title ?></a>
-                       	</h3>
-                       	<p><?php echo substr($slider->post_content , 0, 87)?>...</p>
-                    </figcaption>
-                </figure>       
-            <?php endforeach?>
-
-			<article class="col-md-6 col-sm-6 col-xs-12 row question">
-				<img src="<?php echo get_bloginfo('template_directory')?>/images/icon-how.png" alt="" class="col-xs-2 col-esp">
-				<div class="col-xs-10">
+			<article class="col-md-6 col-sm-6 col-xs-12  question">
+				<img src="<?php echo get_bloginfo('template_directory')?>/images/icon-how.png" alt="" class="col-md-2 col-sm-2 col-xs-2 col-esp">
+				<div class="col-md-10 col-sm-9 col-xs-10">
 					<h4>¿Qué son?</h4>
 					<p>Los fondos concursables estudiantiles constituyen una forma de financiamiento institucional para ejecutar iniciativas y...</p>
 					<a href="" class="more">Ver más</a>
 				</div>
 			</article>
 
-			<article class="col-md-6 col-sm-6 col-xs-12 row question">
-				<img src="<?php echo get_bloginfo('template_directory')?>/images/icon-bulb.png" alt="" class="col-xs-2 col-esp">
-				<div class="col-xs-10">
+			<article class="col-md-6 col-sm-6 col-xs-12  question">
+				<img src="<?php echo get_bloginfo('template_directory')?>/images/icon-bulb.png" alt="" class="col-md-2 col-sm-2 col-xs-2 col-esp">
+				<div class="col-md-10 col-sm-9 col-xs-10">
 					<h4>¡Participa de los fondos concursables 2014!</h4>
 					<p>Los fondos concursables estudiantiles constituyen una forma de financiamiento institucional para ejecutar iniciativas y...</p>
 					<a href="" class="more">Ver más</a>
 				</div>
 			</article>
 
-			<article class="col-md-6 col-sm-6 col-xs-12 row question">
-				<img src="<?php echo get_bloginfo('template_directory')?>/images/icon-target.png" alt="" class="col-xs-2 col-esp">
-				<div class="col-xs-10">
+			<article class="col-md-6 col-sm-6 col-xs-12  question">
+				<img src="<?php echo get_bloginfo('template_directory')?>/images/icon-target.png" alt="" class="col-md-2 col-sm-2 col-xs-2 col-esp">
+				<div class="col-md-10 col-sm-9 col-xs-10">
 					<h4>¿Cuáles son sus objetivos?</h4>
 					<p>Los fondos concursables estudiantiles constituyen una forma de financiamiento institucional para ejecutar iniciativas y...</p>
 					<a href="" class="more">Ver más</a>
 				</div>
 			</article>
 
-			<article class="col-md-6 col-sm-6 col-xs-12 row question">
-				<img src="<?php echo get_bloginfo('template_directory')?>/images/icon-when.png" alt="" class="col-xs-2 col-esp">
-				<div class="col-xs-10">
+			<article class="col-md-6 col-sm-6 col-xs-12  question">
+				<img src="<?php echo get_bloginfo('template_directory')?>/images/icon-when.png" alt="" class="col-md-2 col-sm-2 col-xs-2 col-esp">
+				<div class="col-md-10 col-sm-9 col-xs-10">
 					<h4>¿Cuándo y cómo postular?</h4>
 					<p>Los fondos concursables estudiantiles constituyen una forma de financiamiento institucional para ejecutar iniciativas y...</p>
-					<a href="" class="more">Ver más</a>
+					<a href="<?php home_url();?>/construccion" class="more">Ver más</a>
 				</div>
 			</article>
 	
@@ -131,38 +153,38 @@
 <!-- Fondos Concursables Fin -->
 
 <!-- Actividades Inicio -->
-<section class="actividades">
+<!-- <section class="actividades">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<h2>Actividades</h2>
 
-				<?php $actividades= get_posts(array('post_type' => 'actividades' , 'numberposts' => 8)); ?>
-	                <?php $countactividades = 0 ?>
-	                <?php foreach ($actividades as $actividad): ?>
-	                <?php $countactividades++ ?>
+				<?php //$actividades= get_posts(array('post_type' => 'actividades' , 'numberposts' => 8)); ?>
+	                <?php //$countactividades = 0 ?>
+	                <?php //foreach ($actividades as $actividad): ?>
+	                <?php //$countactividades++ ?>
 	                <figure class=" col-md-3 col-sm-6 col-xs-12 col-esp square"> 
-	                    <?php echo get_the_post_thumbnail( $actividad->ID , 'squareactivity', array('class' => 'img-responsive')) ?>
+	                    <?php //echo get_the_post_thumbnail( $actividad->ID , 'squareactivity', array('class' => 'img-responsive')) ?>
 	                    <span class>
-	                        <strong><?php echo get_the_date('d', $actividad->ID); ?></strong> 
-	                        <small><?php echo get_the_date('M', $actividad->ID); ?></small>
+	                        <strong><?php //echo get_the_date('d', $actividad->ID); ?></strong> 
+	                        <small><?php //echo get_the_date('M', $actividad->ID); ?></small>
                     	</span>
 	                    <figcaption class="activity side">
-	                    	<span class="orange-tag"><?php echo wp_get_post_categories( $actividad->ID ); ?></span>
+	                    	<span class="orange-tag"><?php //echo wp_get_post_categories( $actividad->ID ); ?></span>
 	                        <h3>
-	                            <a href="<?php echo get_permalink($actividad->ID);?>" title="<?php echo $actividad->post_title ?>" rel="nofollow"><?php echo $actividad->post_title ?></a>
+	                            <a href="<?php //echo get_permalink($actividad->ID);?>" title="<?php //echo $actividad->post_title ?>" rel="nofollow"><?php //echo $actividad->post_title ?></a>
 	                       	</h3>
-	                       	<p><?php echo substr($actividad->post_content , 0, 87)?>...</p>
+	                       	<p><?php //echo substr($actividad->post_content , 0, 87)?>...</p>
 	                    </figcaption>
 	                </figure>       
-	            <?php endforeach?>
+	            <?php //endforeach?>
 
-	            <a class="btn btn-danger" href="<?php echo get_page_link(11)?>" title="Ver más" rel="blog">Ver más Actividades</a>
+	            <a class="btn btn-danger" href="<?php //echo get_page_link(11)?>" title="Ver más" rel="blog">Ver más Actividades</a>
 
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
 <!-- Actividades Fin -->
 
 <!-- Ferias inicio -->
@@ -171,14 +193,14 @@
 		<div class="row">
 			<div class="col-md-12">
 
-					<div class="col-md-6 col-esp">
+					<div class="col-md-6 col-sm-6 col-esp">
 						<div class="laboral">
-							<h2><a href="<?php echo get_page_link(76)?>" title="Ir a Feria Laboral" rel="nofollow">Feria Laboral</a></h2>
+							<h2><a href="http://helpdesk.cepech.cl/vidaestudiantil/index.php?option=com_content&view=article&id=114#empleos" title="Ir a Feria Laboral" rel="nofollow">Feria Laboral</a></h2>
 						</div>
 					</div>
-					<div class="col-md-6 col-esp">
+					<div class="col-md-6 col-sm-6 col-esp">
 						<div class="carrera">
-							<h2><a href="<?php echo get_page_link(77)?>" title="Ir a Feria Carreras" rel="nofollow">Feria Carreras</a></h2>
+							<h2><a href="http://helpdesk.cepech.cl/vidaestudiantil/index.php?option=com_content&view=article&id=114#carrera" title="Ir a Feria Carreras" rel="nofollow">Feria Carreras</a></h2>
 						</div>
 					</div>
 
