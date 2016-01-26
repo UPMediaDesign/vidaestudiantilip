@@ -1,8 +1,10 @@
 <?php get_header(); ?>
 
+<?php get_template_part('socialbar'); ?>
+
 <section id="slider">
 	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-		<?php $sliders = get_posts(array('post_type' => 'publicaciones' , 'numberposts' => 6)) ?>
+		<?php $sliders = get_posts(array('post_type' => 'actividades' , 'numberposts' => 4)) ?>
         <div class="carousel-inner" role="listbox">
             <?php $slc = 0?>
             <?php foreach($sliders as $slider):?>
@@ -12,16 +14,11 @@
                   
                 <div class="jumbotron base col-md-5 col-md-offset-6">
                     <h2><?php echo $slider->post_title?></h2>
-                    <span><?php echo get_field('numero_de_publicacion', $slider->ID)?>, <?php echo get_field('mes_inicio', $slider->ID)?>/<?php echo get_field('mes_fin', $slider->ID)?></span>
+					<span><?php echo get_the_time('d')?> de <?php echo get_the_time('M, Y')?> </span>              
                     <p class="intro-ed"><?php echo $slider->post_excerpt?></p>
                     <p class="paragraph"><?php echo substr($slider->post_content , 0, 145)?>...</p>
             
-                    <a class="btn btn-danger" target="_blank" href="<?php echo get_field('link_publicacion', $slider->ID)?>">
-                                        Ver Pubicación
-                    </a>
-                    <!-- <a class="btn btn-warning download" href="<?php //echo get_field('descarga', $slider->ID)?>">
-                                        Descargar Publicación
-                    </a> -->
+                    <a class="btn btn-danger" target="_blank" href="<?php echo get_permalink($slider->ID);?>">Ver Más</a>
                 </div>
             
                 <div class="col-md-1 skk desktop"></div>
@@ -48,7 +45,7 @@
 					<h2><?php echo $slider->post_title?></h2>
 					<div class="clear separator"></div>
 					<span class="col-xs-3">
-						<?php echo get_field('numero_de_publicacion', $slider->ID)?>
+						<?php echo get_field('numero_de_publicacion', $publish->ID)?>
 					</span>
 
 					<div class="col-xs-9 row">
@@ -56,7 +53,7 @@
                     	<span class="yellow-bg">
                     		<p class="paragraph"><?php echo substr($publish->post_content , 0, 145)?>...</p>
                     	</span>
-                    	<a class="btn btn-danger" target="_blank" href="<?php echo get_field('link_publicacion', $slider->ID)?>"> Ver Pubicación </a>
+                    	<a class="btn btn-danger" target="_blank" href="<?php echo get_permalink($publish->ID);?>"> Ver Pubicación </a>
 					</div>
                 </article>  
 
