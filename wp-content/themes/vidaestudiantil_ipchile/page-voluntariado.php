@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Fondos Concursables
+Template Name: Voluntariado
 */
 ?>
 
@@ -27,30 +27,12 @@ Template Name: Fondos Concursables
     </div>
 </div>
 
-<!-- Video Fondos Concursables -->
-<section class="fondos video">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-12">
-                <h3>
-                    <span>Experiencia Fondo</span>
-                    <span>Concursable</span>
-                </h3>
-            </div>
-            <div class="col-md-7 col-sm-7 col-xs-12 publishframe">
-
-                <iframe width="581" height="327" src="<?php echo get_field('embed_video') ?>" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- Acerca Fondos -->
 <section class="fondos whos">
     <div class="container-fluid">
         <div class="row">
 
-            <?php $fondos = get_field('area_fondos', $post->ID); ?>
+            <?php $fondos = get_field('area_voluntariado', $post->ID); ?>
             <?php $countfondos = 0 ?>
             <?php foreach ($fondos as $fondo): ?>
             <?php $countfondos++ ?>
@@ -94,18 +76,6 @@ Template Name: Fondos Concursables
     </div>
 </section>
 
-<div class="bases">
-    <div class="container">
-        <div class="row">
-
-            <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
-                <a href="" class="btn btn-warning" rel="nofollow" title="Descargar Bases">Descargar Bases</a>
-                <a href="" class="btn btn-danger" rel="nofollow" title="Formulario de Postulación">Formulario de Postulación</a>
-            </div>
-
-        </div>
-    </div>
-</div>
 
 <!-- Suscripción al newsletter -->
 <section class="subscribe">

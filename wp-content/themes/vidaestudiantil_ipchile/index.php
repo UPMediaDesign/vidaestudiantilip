@@ -14,7 +14,6 @@
                   
                 <div class="jumbotron base col-md-5 col-md-offset-6">
                     <h2><?php echo $slider->post_title?></h2>
-					<span><?php echo get_the_time('d')?> de <?php echo get_the_time('M, Y')?> </span>              
                     <p class="intro-ed"><?php echo $slider->post_excerpt?></p>
                     <p class="paragraph"><?php echo substr($slider->post_content , 0, 145)?>...</p>
             
@@ -42,7 +41,7 @@
             <?php $countpublishes++ ?>
             	
                 <article class="col-md-6 col-sm-6 col-xs-12"> 
-					<h2><?php echo $slider->post_title?></h2>
+					<h2><?php echo $publish->post_title?></h2>
 					<div class="clear separator"></div>
 					<span class="col-xs-3">
 						<?php echo get_field('numero_de_publicacion', $publish->ID)?>
@@ -53,7 +52,7 @@
                     	<span class="yellow-bg">
                     		<p class="paragraph"><?php echo substr($publish->post_content , 0, 145)?>...</p>
                     	</span>
-                    	<a class="btn btn-danger" target="_blank" href="<?php echo get_permalink($publish->ID);?>"> Ver Pubicación </a>
+                    	<a class="btn btn-danger" target="_blank" href="<?php echo get_field('embed_publicacion', $publish->ID)?>"> Ver Pubicación </a>
 					</div>
                 </article>  
 
@@ -113,7 +112,7 @@
 				<div class="col-md-10 col-sm-9 col-xs-10">
 					<h4>¿Qué son?</h4>
 					<p>Los fondos concursables estudiantiles constituyen una forma de financiamiento institucional para ejecutar iniciativas y...</p>
-					<a href="" class="more">Ver más</a>
+					<a href="<?php bloginfo('url')?>/fondos-concursables/" class="more">Ver más</a>
 				</div>
 			</article>
 
@@ -122,7 +121,7 @@
 				<div class="col-md-10 col-sm-9 col-xs-10">
 					<h4>¡Participa de los fondos concursables 2014!</h4>
 					<p>Los fondos concursables estudiantiles constituyen una forma de financiamiento institucional para ejecutar iniciativas y...</p>
-					<a href="" class="more">Ver más</a>
+					<a href="<?php bloginfo('url')?>/fondos-concursables/" class="more">Ver más</a>
 				</div>
 			</article>
 
@@ -131,7 +130,7 @@
 				<div class="col-md-10 col-sm-9 col-xs-10">
 					<h4>¿Cuáles son sus objetivos?</h4>
 					<p>Los fondos concursables estudiantiles constituyen una forma de financiamiento institucional para ejecutar iniciativas y...</p>
-					<a href="" class="more">Ver más</a>
+					<a href="<?php bloginfo('url')?>/fondos-concursables/" class="more">Ver más</a>
 				</div>
 			</article>
 
@@ -140,7 +139,7 @@
 				<div class="col-md-10 col-sm-9 col-xs-10">
 					<h4>¿Cuándo y cómo postular?</h4>
 					<p>Los fondos concursables estudiantiles constituyen una forma de financiamiento institucional para ejecutar iniciativas y...</p>
-					<a href="<?php home_url();?>/construccion" class="more">Ver más</a>
+					<a href="<?php bloginfo('url')?>/fondos-concursables/" class="more">Ver más</a>
 				</div>
 			</article>
 	
@@ -192,12 +191,12 @@
 
 					<div class="col-md-6 col-sm-6 col-esp">
 						<div class="laboral">
-							<h2><a href="http://helpdesk.cepech.cl/vidaestudiantil/index.php?option=com_content&view=article&id=114#empleos" title="Ir a Feria Laboral" rel="nofollow">Feria Laboral</a></h2>
+							<h2><a href="<?php bloginfo('url')?>/ferias/" title="Ir a Feria Laboral" rel="nofollow">Feria Laboral</a></h2>
 						</div>
 					</div>
 					<div class="col-md-6 col-sm-6 col-esp">
 						<div class="carrera">
-							<h2><a href="http://helpdesk.cepech.cl/vidaestudiantil/index.php?option=com_content&view=article&id=114#carrera" title="Ir a Feria Carreras" rel="nofollow">Feria Carreras</a></h2>
+							<h2><a href="<?php bloginfo('url')?>/ferias/" title="Ir a Feria Carreras" rel="nofollow">Feria Carreras</a></h2>
 						</div>
 					</div>
 

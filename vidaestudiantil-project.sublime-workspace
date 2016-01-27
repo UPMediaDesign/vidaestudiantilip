@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"paddi",
+				"padding-bottom"
+			],
+			[
+				"fondo",
+				"fondopullcontent"
+			],
+			[
+				"soc",
+				"soc-visible"
+			],
+			[
 				"font",
 				"font-size"
 			],
@@ -17,10 +29,6 @@
 			],
 			[
 				"padding",
-				"padding-top"
-			],
-			[
-				"paddi",
 				"padding-top"
 			],
 			[
@@ -391,7 +399,7 @@
 			"file": "wp-content/themes/vidaestudiantil_ipchile/page-fondos.php",
 			"settings":
 			{
-				"buffer_size": 3456,
+				"buffer_size": 4096,
 				"line_ending": "Unix"
 			}
 		},
@@ -399,39 +407,15 @@
 			"file": "wp-content/themes/vidaestudiantil_ipchile/index.php",
 			"settings":
 			{
-				"buffer_size": 9487,
+				"buffer_size": 9397,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "<div class=\"col-xs-12 col-md-6\">\n            	<div style=\"margin-right:-30px\">\n                    <div class=\"searchh col-xs-4 col-sm-5\">\n                        <form method=\"get\" id=\"searchform\" action=\"<?php bloginfo('url')?>\">\n                            <label class=\"hidden\" for=\"s\"></label>\n                            <a onclick=\"document.getElementById('searchform').submit();\"><span class=\"fa fa-search\"></span></a>\n                            <input type=\"text\" placeholder=\"¿Qué buscas?...\" value=\"\" name=\"s\" id=\"s\">\n                        </form>\n                    </div>\n                </div>\n</div>				",
+			"file": "wp-content/themes/vidaestudiantil_ipchile/archive-actividades.php",
 			"settings":
 			{
-				"buffer_size": 622,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wp-content/themes/vidaestudiantil_ipchile/socialbar.php",
-			"settings":
-			{
-				"buffer_size": 1540,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wp-content/themes/vidaestudiantil_ipchile/header.php",
-			"settings":
-			{
-				"buffer_size": 2597,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wp-content/themes/vidaestudiantil_ipchile/404.php",
-			"settings":
-			{
-				"buffer_size": 1470,
+				"buffer_size": 5206,
 				"line_ending": "Unix"
 			}
 		},
@@ -439,15 +423,7 @@
 			"file": "wp-content/themes/vidaestudiantil_ipchile/style.css",
 			"settings":
 			{
-				"buffer_size": 54117,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wp-content/themes/vidaestudiantil_ipchile/search.php",
-			"settings":
-			{
-				"buffer_size": 2605,
+				"buffer_size": 56856,
 				"line_ending": "Unix"
 			}
 		},
@@ -460,26 +436,10 @@
 			}
 		},
 		{
-			"file": "wp-content/themes/vidaestudiantil_ipchile/footer.php",
+			"file": "wp-content/themes/vidaestudiantil_ipchile/header.php",
 			"settings":
 			{
-				"buffer_size": 2158,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wp-content/themes/vidaestudiantil_ipchile/page-avanza.php",
-			"settings":
-			{
-				"buffer_size": 3388,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wp-content/themes/vidaestudiantil_ipchile/archive-actividades.php",
-			"settings":
-			{
-				"buffer_size": 5219,
+				"buffer_size": 2597,
 				"line_ending": "Unix"
 			}
 		}
@@ -508,16 +468,18 @@
 	},
 	"file_history":
 	[
-		"/Users/upmedia/GitHub/vidaestudiantilip/wp-content/themes/vidaestudiantil_ipchile/socialbar.php",
 		"/Users/upmedia/GitHub/vidaestudiantilip/wp-content/themes/vidaestudiantil_ipchile/page-avanza.php",
+		"/Users/upmedia/GitHub/vidaestudiantilip/wp-content/themes/vidaestudiantil_ipchile/footer.php",
+		"/Users/upmedia/GitHub/vidaestudiantilip/wp-content/themes/vidaestudiantil_ipchile/search.php",
+		"/Users/upmedia/GitHub/vidaestudiantilip/wp-content/themes/vidaestudiantil_ipchile/page-fondos.php",
+		"/Users/upmedia/GitHub/vidaestudiantilip/wp-content/themes/vidaestudiantil_ipchile/index.php",
+		"/Users/upmedia/GitHub/vidaestudiantilip/wp-content/themes/vidaestudiantil_ipchile/socialbar.php",
+		"/Users/upmedia/GitHub/vidaestudiantilip/wp-content/themes/vidaestudiantil_ipchile/header.php",
+		"/Users/upmedia/GitHub/vidaestudiantilip/wp-content/themes/vidaestudiantil_ipchile/404.php",
 		"/Users/upmedia/GitHub/vidaestudiantilip/wp-content/themes/vidaestudiantil_ipchile/archive-actividades.php",
 		"/Users/upmedia/GitHub/vidaestudiantilip/wp-content/themes/vidaestudiantil_ipchile/page-quienessomos.php",
-		"/Users/upmedia/GitHub/vidaestudiantilip/wp-content/themes/vidaestudiantil_ipchile/header.php",
-		"/Users/upmedia/GitHub/vidaestudiantilip/wp-content/themes/vidaestudiantil_ipchile/index.php",
 		"/Users/upmedia/GitHub/vidaestudiantilip/wp-content/themes/vidaestudiantil_ipchile/single-actividades.php",
-		"/Users/upmedia/GitHub/vidaestudiantilip/wp-content/themes/vidaestudiantil_ipchile/footer.php",
 		"/Users/upmedia/GitHub/vidaestudiantilip/wp-content/themes/vidaestudiantil_ipchile/page-planes.php",
-		"/Users/upmedia/GitHub/vidaestudiantilip/wp-content/themes/vidaestudiantil_ipchile/page-fondos.php",
 		"/Users/upmedia/GitHub/vidaestudiantilip/wp-content/themes/vidaestudiantil_ipchile/page-ferias.php",
 		"/Users/upmedia/GitHub/vidaestudiantilip/wp-content/themes/vidaestudiantil_ipchile/page.php",
 		"/Users/upmedia/GitHub/vidaestudiantilip/wp-content/themes/vidaestudiantil_ipchile/functions.php",
@@ -633,9 +595,7 @@
 		"/private/var/folders/qt/8cc7xcts4cjccztx7wylwbjh0000gn/T/fz3temp-1/page-equipo.php",
 		"/private/var/folders/qt/8cc7xcts4cjccztx7wylwbjh0000gn/T/fz3temp-1/page-archives.php",
 		"/private/var/folders/qt/8cc7xcts4cjccztx7wylwbjh0000gn/T/fz3temp-1/part-post.php",
-		"/private/var/folders/qt/8cc7xcts4cjccztx7wylwbjh0000gn/T/fz3temp-1/archive.php",
-		"/Users/upmedia/Desktop/paid.json",
-		"/private/var/folders/qt/8cc7xcts4cjccztx7wylwbjh0000gn/T/fz3temp-1/dato20130830093548.log"
+		"/private/var/folders/qt/8cc7xcts4cjccztx7wylwbjh0000gn/T/fz3temp-1/archive.php"
 	],
 	"find":
 	{
@@ -655,6 +615,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"fondos",
 			"not found",
 			"404",
 			"publishframe",
@@ -781,8 +742,7 @@
 			"#header .nav-toggle",
 			"ul.products li.product img",
 			"navigation",
-			"wrapper",
-			"footer-wrap"
+			"wrapper"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -800,7 +760,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -808,15 +768,15 @@
 					"file": "wp-content/themes/vidaestudiantil_ipchile/page-fondos.php",
 					"settings":
 					{
-						"buffer_size": 3456,
+						"buffer_size": 4096,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								787,
-								787
+								3882,
+								3885
 							]
 						],
 						"settings":
@@ -840,15 +800,15 @@
 					"file": "wp-content/themes/vidaestudiantil_ipchile/index.php",
 					"settings":
 					{
-						"buffer_size": 9487,
+						"buffer_size": 9397,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1338,
-								1338
+								8695,
+								8695
 							]
 						],
 						"settings":
@@ -860,54 +820,95 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2656.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
 				{
 					"buffer": 2,
+					"file": "wp-content/themes/vidaestudiantil_ipchile/archive-actividades.php",
 					"settings":
 					{
-						"buffer_size": 622,
+						"buffer_size": 5206,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								330,
-								386
+								1572,
+								1572
 							]
 						],
 						"settings":
 						{
 							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true,
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 470.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "wp-content/themes/vidaestudiantil_ipchile/socialbar.php",
+					"file": "wp-content/themes/vidaestudiantil_ipchile/style.css",
 					"settings":
 					{
-						"buffer_size": 1540,
+						"buffer_size": 56856,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1540,
-								1540
+								56849,
+								56849
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 15096.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "wp-content/themes/vidaestudiantil_ipchile/functions.php",
+					"settings":
+					{
+						"buffer_size": 9968,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								718,
+								718
 							]
 						],
 						"settings":
@@ -927,7 +928,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "wp-content/themes/vidaestudiantil_ipchile/header.php",
 					"settings":
 					{
@@ -952,230 +953,7 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 61.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "wp-content/themes/vidaestudiantil_ipchile/404.php",
-					"settings":
-					{
-						"buffer_size": 1470,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1470,
-								1470
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 6,
-					"file": "wp-content/themes/vidaestudiantil_ipchile/style.css",
-					"settings":
-					{
-						"buffer_size": 54117,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								43448,
-								43448
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 10547.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "wp-content/themes/vidaestudiantil_ipchile/search.php",
-					"settings":
-					{
-						"buffer_size": 2605,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								601,
-								99
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "wp-content/themes/vidaestudiantil_ipchile/functions.php",
-					"settings":
-					{
-						"buffer_size": 9968,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1075,
-								1075
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 587.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "wp-content/themes/vidaestudiantil_ipchile/footer.php",
-					"settings":
-					{
-						"buffer_size": 2158,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1714,
-								1714
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "wp-content/themes/vidaestudiantil_ipchile/page-avanza.php",
-					"settings":
-					{
-						"buffer_size": 3388,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								917,
-								917
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "wp-content/themes/vidaestudiantil_ipchile/archive-actividades.php",
-					"settings":
-					{
-						"buffer_size": 5219,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2487,
-								2461
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 660.0,
+						"translation.y": 96.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
