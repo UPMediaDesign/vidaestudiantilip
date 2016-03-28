@@ -5,7 +5,10 @@
 			<div class="col-lg-3 col-md-3 col-sm-12 brand-foot">
 				<a class="navbar-brand foot" href="<?php echo get_bloginfo('url')?>">
 	        		<img alt="Brand" src="<?php echo get_bloginfo('template_directory')?>/images/logo_vida_estudiantil.png" class="lc">
-	    	  		</a>
+	    	  	</a>
+	    	  	<a class="navbar-brand foot" href="<?php echo get_bloginfo('url')?>">
+	        		<img style="width: 100%; float: left; max-width: 88px;" alt="Brand" src="<?php echo get_bloginfo('template_directory')?>/images/logo_daefoot.png" class="lc">
+	    	  	</a>
 			</div>
 
 			<?php wp_nav_menu( array( 'container' => 'none', 'menu_class' => 'footer-nav col-lg-2 col-md-2 col-sm-3 col-xs-12 service ' , 'theme_location' => 'second' ) ); ?>

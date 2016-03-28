@@ -183,22 +183,23 @@
 </section> -->
 <!-- Actividades Fin -->
 
-<!-- Ferias inicio -->
-<section class="ferias">
+<div class="blue-invite">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
+				<div class="col-md-12 col-sm-12  col-xs-12">
+					<h3> Las ferias de carreras IPCHILE constituyen una actividad crucial para IPCHILE.</h3>
+			</div>
+		</div>
+	</div>
+</div>
 
-					<div class="col-md-6 col-sm-6 col-esp">
-						<div class="laboral">
-							<h2><a href="<?php bloginfo('url')?>/ferias/" title="Ir a Feria Laboral" rel="nofollow">Feria Laboral</a></h2>
-						</div>
-					</div>
-					<div class="col-md-6 col-sm-6 col-esp">
-						<div class="carrera">
-							<h2><a href="<?php bloginfo('url')?>/ferias/" title="Ir a Feria Carreras" rel="nofollow">Feria Carreras</a></h2>
-						</div>
-					</div>
+<!-- Ferias inicio -->
+<section class="ferias">
+	<div class="container-fluid">
+		<div class="row">
+
+			<div class="col-md-12 col-esp carrera">
+				<h2><a href="<?php bloginfo('url')?>/ferias/" title="Ir a Feria Carreras" rel="nofollow">Feria Carreras</a></h2>	
 
 			</div>
 		</div>

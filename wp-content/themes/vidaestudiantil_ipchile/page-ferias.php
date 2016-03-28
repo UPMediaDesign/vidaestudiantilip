@@ -6,7 +6,7 @@ Template Name: Ferias
 
 <?php get_header(); ?>
 
-<?php //get_template_part('socialbar'); ?>
+<?php get_template_part('socialbar'); ?>
 
 <?php $bgid = get_post_thumbnail_id($post->ID)?>
 <?php $bg = wp_get_attachment_image_src( $bgid, 'headingpage' ); ?>
@@ -28,36 +28,75 @@ Template Name: Ferias
 </div>
 
 <section class="ferias insider">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <?php $ferias = get_posts(array('post_type' => 'ferias' , 'posts_per_page' => 2 )); ?>
-            <?php $countferias = 0 ?>
-            <?php foreach ($ferias as $feria): ?>
-            <?php $countferias++ ?>
-            <figure class="col-md-6 col-sm-6 col-xs-12 col-esp">
-                <?php echo get_the_post_thumbnail( $feria->ID , 'ferias', array('class' => 'img-responsive')) ?>
-               <figcaption class="fair-cta">
-                    <h2><?php echo $feria->post_title ?></h2>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-v-<?php echo $feria->ID?>">Ver más</button>
-               </figcaption>
+            <div class="col-md-12 col-sm-12 col-xs-12">
                 
-            </figure>
-
-            <?php endforeach; ?>
-
-            <?php foreach ($ferias as $modal):?>
-            <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="modal-v-<?php echo $modal->ID?>">
-              <div class="modal-dialog modal-lg ">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                </div>
-                <div class="modal-content">
-                    <h2><?php echo $modal->post_title ?></h2>
-                    <p><?php echo $modal->post_content ?></p>
-                </div>
-              </div>
+                <?php echo $post->post_content; ?>
+                
             </div>
-            <?php endforeach?>
+        </div>
+    </div>
+</section>
+
+<section class="ferias gallery">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+                <h3>Revisa nuestra Galería</h3>
+                <span>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus sagittis convallis libero, et laoreet ligula aliquet convallis rutrum.</span>
+            </div>
+
+            <div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+
+                <ul class="nav nav-pills nav-stacked">
+
+                <?php $fairgallery = get_field('feria_gallery', $post->ID); ?>
+                <?php $fairgallerycount = 0?>
+                <?php foreach($fairgallery as $fairimage):?>
+                    <?php $fairgallerycount++?>
+                    <li class="col-md-3 col-xs-3 col-esp"><a data-target="#lightbox" data-toggle="modal" data-slide-to="<?php echo $fairgallerycount?>"><img src="<?php echo $fairimage['sizes']['thumbnail'] ?>" class="img-responsive" alt="..."></a></li>
+
+                <?php endforeach;?> 
+
+                
+                <div class="modal fade and carousel slide" id="lightbox">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+
+                          <div class="carousel-inner">
+                            <?php $fairmodalcount = 0 ?>
+                            <?php foreach($fairgallery as $fairmodal):?>
+                            <?php $fairmodalcount++?>
+                            <div class="item <?php if($fairmodalcount == 1){echo 'active';}?>">
+
+                              <img src="<?php echo $fairmodal['sizes']['modal']?>" class="img-responsive" alt="<?php echo $fairmodal['alt'];?>">
+                            </div>
+                            <?php endforeach;?> 
+                          </div><!-- /.carousel-inner -->
+
+                          <a class="left carousel-control" href="#lightbox" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                          </a>
+
+                          <a class="right carousel-control" href="#lightbox" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                          </a>
+
+                         </div><!-- /.modal-body -->
+                      </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                  </div><!-- /.modal --> 
+
+
+
+               </ul>
+            </div>
         </div>
     </div>
 </section>

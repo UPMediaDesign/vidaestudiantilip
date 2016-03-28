@@ -27,6 +27,59 @@ Template Name: Quienes Somos
     </div>
 </div>
 
+<section class="about-title">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Contacta con nuestros encargados de sede</h3>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="somos">
+    <div class="container">
+        <div class="row">
+
+			<div class="col-md-12 who-content">
+			<?php $sedestaffs = get_field('staff_sede' , $post->ID)?>
+            <?php $adds = 0?>
+            <?php foreach($sedestaffs as $sedestaff):?>
+			<?php $adds++?>
+
+
+					<div class="display-address col-md-12 col-sm-12">
+						<h3><?php echo $sedestaff['nombre_sede']?></h3>
+						<p><?php echo $sedestaff['direccion_sede']?></p>
+						<p>Fono: <a href="tel:<?php echo $sedestaff['telefono_sede']?>"><?php echo $sedestaff['telefono_sede']?></a></p> 
+					</div>
+
+
+					<?php foreach($sedestaff['integrante_staff'] as $integrante){ ?>
+
+					<figure class="team-staff col-md-3 col-sm-6 col-xs-12">
+						<!-- <img src="<?php //echo $integrante['avatar_integrante']['sizes']['thumbnail']?>" alt="<?php //echo $integrante['nombre_integrante']?>"> -->
+						<figcaption>
+							<h4><?php echo $integrante['nombre_integrante']?></h4>
+							<p><span><?php echo $integrante['cargo_integrante']?></span></p>
+							<p><?php echo $integrante['anexo_integrante']?></p>
+							<a href="mailto:<?php echo $integrante['mail_integrante']?>"><?php echo $integrante['mail_integrante']?></a>
+						</figcaption>
+					</figure>
+
+
+				<?php } ?>
+			<?php endforeach ?>
+
+            <?php echo get_the_content(); ?>
+               
+            </div>
+
+        </div>
+    </div>
+	
+</section>
+
 <section class="somos-tabs">
 	<div class="container">
 		<div class="row">
@@ -50,7 +103,7 @@ Template Name: Quienes Somos
 
 			    <li role="presentation" class="<?php echo $tabclass?>">
 			    	<a href="#tab-<?php echo $ctoabs?>" aria-controls="home" role="tab" data-toggle="tab">
-						<img src="<?php echo $tab['icono_pestana']?>" alt="Icono <?php echo $tab['titulo_pestana']?>">
+						<!-- <img src="<?php //echo $tab['icono_pestana']?>" alt="Icono <?php //echo $tab['titulo_pestana']?>"> -->
 						<span><?php echo $tab['titulo_pestana']?></span>
 			    	</a>
 			    </li>
@@ -84,45 +137,6 @@ Template Name: Quienes Somos
 
 		</div>
 	</div>
-</section>
-
-<section class="somos">
-    <div class="container">
-        <div class="row">
-
-			<div class="col-md-12 who-content">
-			<?php $sedestaffs = get_field('staff_sede' , $post->ID)?>
-            <?php $adds = 0?>
-            <?php foreach($sedestaffs as $sedestaff):?>
-			<?php $adds++?>
-
-            	<div class="display-address col-md-12 col-sm-12">
-					<h3><?php echo $sedestaff['nombre_sede']?></h3>
-					<p><?php echo $sedestaff['direccion_sede']?></p>
-					<p>Fono: <a href="tel:<?php echo $sedestaff['telefono_sede']?>"><?php echo $sedestaff['telefono_sede']?></a></p> 
-				</div>
-
-				<?php foreach($sedestaff['integrante_staff'] as $integrante){ ?>
-
-				<figure class="team-staff col-md-3 col-sm-6 col-xs-12">
-					<img src="<?php echo $integrante['avatar_integrante']['sizes']['thumbnail']?>" alt="<?php echo $integrante['nombre_integrante']?>">
-					<figcaption>
-						<h4><?php echo $integrante['nombre_integrante']?></h4>
-						<p><span><?php echo $integrante['cargo_integrante']?></span></p>
-						<p><?php echo $integrante['anexo_integrante']?></p>
-						<a href="mailto:<?php echo $integrante['mail_integrante']?>"><?php echo $integrante['mail_integrante']?></a>
-					</figcaption>
-				</figure>
-				<?php } ?>
-			<?php endforeach ?>
-
-            <?php echo get_the_content(); ?>
-               
-            </div>
-
-        </div>
-    </div>
-	
 </section>
 
 <!-- Suscripción al newsletter -->

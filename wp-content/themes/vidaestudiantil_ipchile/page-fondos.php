@@ -27,6 +27,79 @@ Template Name: Fondos Concursables
     </div>
 </div>
 
+<section class="intro-fondos">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12-col-sm-12 col-xs-12">
+                <img src="<?php echo get_bloginfo('template_directory')?>/images/about_deep.png" alt="" class="img-responsive">
+                <?php echo $post->post_content; ?>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="photograph-area">
+    <div class="container-fluid">
+        <div class="row">
+            <img src="<?php echo get_bloginfo('template_directory')?>/images/row1.jpg" alt="" class="col-xs-twelve-five col-esp">
+            <img src="<?php echo get_bloginfo('template_directory')?>/images/row2.jpg" alt="" class="col-xs-twelve-five col-esp">
+            <img src="<?php echo get_bloginfo('template_directory')?>/images/row3.jpg" alt="" class="col-xs-twelve-five col-esp">
+            <img src="<?php echo get_bloginfo('template_directory')?>/images/row4.jpg" alt="" class="col-xs-twelve-five col-esp">
+            <img src="<?php echo get_bloginfo('template_directory')?>/images/row5.jpg" alt="" class="col-xs-twelve-five col-esp">
+            <img src="<?php echo get_bloginfo('template_directory')?>/images/row6.jpg" alt="" class="col-xs-twelve-five col-esp">
+            <img src="<?php echo get_bloginfo('template_directory')?>/images/row7.jpg" alt="" class="col-xs-twelve-five col-esp">
+            <img src="<?php echo get_bloginfo('template_directory')?>/images/row8.jpg" alt="" class="col-xs-twelve-five col-esp">
+        </div>
+    </div>
+</section>
+
+
+
+<section class="volunteer whos">
+    <div class="container">
+        <div class="row">
+            <!-- Acerca Fondos -->                
+
+            <div class="col-md-6 col-sm-12 col-xs-12">  
+                <?php $fondos = get_field('area_fondos', $post->ID); ?>
+                <?php $countfondos = 0 ?>
+                <?php foreach ($fondos as $fondo): ?>
+                <?php $countfondos++ ?>
+
+                <figure class="col-md-12 col-sm-12">
+                        <div class="col-xs-4">
+                            <img class="img-responsive enc" src="<?php echo $fondo['imagen_apoyo'] ?>" alt="">
+                            <img class="icon-container img-responsive" src="<?php echo $fondo['icono_fondo']?>" alt="Icono <?php echo $fondo['nombre_fondo']?>" class="img-responsive icon">
+                        </div>
+                        <figcaption class="col-xs-8">
+                            <h4><?php echo $fondo['nombre_fondo']?></h4>
+                            <p><?php echo $fondo['contenido_fondo']?></p>
+                        </figcaption></img>
+                </figure>
+                <?php endforeach;?>
+            </div>
+            
+            <!-- Bases de Postulación -->
+            <div class="bases-sign col-md-6 col-sm-12 col-xs-12">
+                <?php $bases = get_field('bases_postulacion', $post->ID); ?>
+                <?php $countbases = 0 ?>
+                <?php foreach ($bases as $base): ?>
+                <?php $countbases = 0 ?>
+                <img src="<?php echo $base['icono_postulacion'] ?>" alt="">
+                <p><?php echo $base['contenido_postulacion'] ?></p>
+                <div class="buttons">
+                    <a href="<?php echo $base['descarga_bases'] ?>" class="btn btn-warning" rel="nofollow" title="Descargar Bases">Descargar Bases</a>
+                    <a href="<?php echo $base['descarga_formulario'] ?>" class="btn btn-danger" rel="nofollow" title="Formulario de Postulación">Formulario de Postulación</a>
+                </div>
+                <div class="clear separator"></div>
+                <?php endforeach;?>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
 <!-- Video Fondos Concursables -->
 <section class="fondos video">
     <div class="container">
@@ -44,68 +117,6 @@ Template Name: Fondos Concursables
         </div>
     </div>
 </section>
-
-<!-- Acerca Fondos -->
-<section class="fondos whos">
-    <div class="container-fluid">
-        <div class="row">
-
-            <?php $fondos = get_field('area_fondos', $post->ID); ?>
-            <?php $countfondos = 0 ?>
-            <?php foreach ($fondos as $fondo): ?>
-            <?php $countfondos++ ?>
-
-            <?php if($countfondos == 1) 
-                {
-                    $fondopullcontent = 'pull-left content';
-                }
-
-                elseif($countfondos == 2){
-                    $fondopullcontent = 'pull-right content';
-                }
-
-                elseif($countfondos == 3){
-                    $fondopullcontent = 'pull-left content';
-                }
-
-                else{
-                    $fondopullcontent = 'pull-right content';
-                }
-            ?>
-
-            <div class="icon-motivo ">
-                <img src="<?php echo $fondo['icono_fondo']?>" alt="Icono <?php echo $fondo['nombre_fondo']?>" class="img-responsive icon">
-            </div>
-
-            <div class="col-md-6 col-sm-6 col-xs-12 motivo <?php echo $fondopullcontent?>">
-                <h4><?php echo $fondo['nombre_fondo']?></h4>
-                <p><?php echo $fondo['contenido_fondo']?></p>
-            </div>
-
-            <div class="col-md-6 col-sm-6 col-xs-12 col-esp motivo <?php echo $fondopullcontent ?>">
-                <img class="img-responsive enc" src="<?php echo $fondo['imagen_apoyo'] ?>" alt="">
-            </div>
-
-            <div class="clear"></div>
-            
-            <?php endforeach?>
-
-        </div>
-    </div>
-</section>
-
-<div class="bases">
-    <div class="container">
-        <div class="row">
-
-            <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
-                <a href="" class="btn btn-warning" rel="nofollow" title="Descargar Bases">Descargar Bases</a>
-                <a href="" class="btn btn-danger" rel="nofollow" title="Formulario de Postulación">Formulario de Postulación</a>
-            </div>
-
-        </div>
-    </div>
-</div>
 
 <!-- Suscripción al newsletter -->
 <section class="subscribe">

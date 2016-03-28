@@ -10,6 +10,8 @@ add_image_size('actidestacado', 490, 205, true );
 add_image_size('ferias', 570, 228, true );
 add_image_size('singleenc', 1200, 510, true);
 add_image_size('publicaciones', 360, 154 ,true);
+add_image_size('modal', 570, 440,true);
+add_image_size('volunteerwho', 180, 180, true);
 }
 /* 
 add_filter('image_size_names_choose', 'my_image_sizes');
